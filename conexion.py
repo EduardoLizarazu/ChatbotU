@@ -34,8 +34,7 @@ def insertar_varios(conexion, datos):
     conexion.close()
 
 
-
 conexion = conectar()
-
+#crear_tablas(conexion) # crea tabla esto se hace al comienzo
 datos = ("tienda-1", "Muy buena", "Ninguno")
 insertar(conexion, datos)
