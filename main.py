@@ -1,6 +1,6 @@
 from ubicacion import *
 from conexion import *
-
+import conexion
 
 conexion = conectar()
 crear_tablas(conexion)
@@ -32,12 +32,18 @@ while salir:
 
 
 # LIMPIEZA DE NONE
-ubicacion_final = []
-for i in ubicacionFinal:
-    if i != None:
-        ubicacion_final.append(i)
-print(f"la ubicacion final es {ubicacion_final}")
+def limpieza(ubicacion_sucia):
+    ubicacion_final = []
+    for i in ubicacion_sucia:
+        if i != None:
+            ubicacion_final.append(i) # NOMBRE_UBICACION_LISTA
+    return ubicacion_final
+
+ubicacion_limpia = limpieza(ubicacionFinal)
 
 
+def insertar(ubiacion):
+    pass
 
+#print(f"la ubicacion final es {limpieza(ubicacionFinal)}")
 print('Fin del programa') 
