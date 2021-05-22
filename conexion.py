@@ -37,5 +37,5 @@ def insertar_varios(conexion, datos):
 
 conexion = conectar()
 
-#datos = ("tienda-1", "Muy buena", "Ninguno")
-#insertar(conexion, datos)
+datos = ("tienda-1", "Muy buena", "Ninguno")
+insertar(conexion, datos)
