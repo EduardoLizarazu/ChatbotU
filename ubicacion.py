@@ -10,10 +10,10 @@ class Ubicacion:
             for n in self.localidad.keys():
                 print(n)
         # aqui voy a capturar la palabra clave = nombreDelLugar
-        for n,l in self.localidad.items():
-            if palabra.lower() != n:
-                print(n, l)
-                return n
+        for nombre, lugar in self.localidad.items():
+            if palabra.lower() == nombre:
+                print(nombre, lugar)
+                return nombre
               
                     
   
@@ -24,7 +24,7 @@ class Ubicacion:
 # TIENDAS
 tiendas = {
             "tienda-1": "ubicacion-1",
-                 "tienda-2": "ubicacion-2",
+            "tienda-2": "ubicacion-2",
             "tienda-3": "ubicacion-3"
         }
 
