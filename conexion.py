@@ -1,3 +1,4 @@
+from os import pipe
 import sqlite3 
 from sqlite3 import Error
 
@@ -35,7 +36,16 @@ def insertar_varios(conexion, datos):
 
 
 
+
 conexion = conectar()
+#insertar(conexion, tuple(datos))
+
 crear_tablas(conexion)
-datos = ("Añdido-3")
-insertar(conexion, datos)
+datos = "Añadido-6"
+lista = []
+lista.append(datos)
+
+tupla = tuple(lista)
+
+print(tupla)
+

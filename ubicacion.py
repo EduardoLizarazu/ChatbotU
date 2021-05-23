@@ -1,3 +1,9 @@
+from typing import Tuple
+from conexion import *
+
+conexion = conectar()
+crear_tablas(conexion)
+
 
 class Ubicacion:
     def __init__(self, nombre, localidad):
@@ -14,7 +20,7 @@ class Ubicacion:
             if palabra.lower() == nombre:
                 print(nombre, lugar)
                 return nombre
-              
+
                     
   
   
