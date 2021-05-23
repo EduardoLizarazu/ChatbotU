@@ -1,4 +1,4 @@
-from typing import Tuple
+
 from conexion import *
 
 conexion = conectar()
@@ -15,11 +15,20 @@ class Ubicacion:
         if palabra.lower() == self.nombre:
             for n in self.localidad.keys():
                 print(n)
+
         # aqui voy a capturar la palabra clave = nombreDelLugar
         for nombre, lugar in self.localidad.items():
             if palabra.lower() == nombre:
                 print(nombre, lugar)
-                return nombre
+                
+
+
+    # El problema es de que tengo que insanciarlas todas
+    def salir(self, palabra):
+        lista = ["salir", "chau", "nos vemos", "finalizar", "terminar"]
+        for i in lista:
+            if palabra.lower() == i:
+                return "salir" 
 
                     
   

@@ -12,14 +12,11 @@ ubicacionFinal = []
 
 while salir:
     for p in palabras:
-        aux_ubicacion_final = tienda.buscar(p)
-        ubicacionFinal.append(aux_ubicacion_final)
+        tienda.buscar(p)
 
-        aux_ubicacion_final = cine.buscar(p)
-        ubicacionFinal.append(aux_ubicacion_final)
-
-        aux_ubicacion_final = comida.buscar(p)
-        ubicacionFinal.append(aux_ubicacion_final)
+        cine.buscar(p)
+        
+        comida.buscar(p)
 
         if p.lower() == "salir":
             print("Nos vemos")
@@ -38,8 +35,7 @@ def limpieza(ubicacion_sucia):
             ubicacion_final.append(i) # NOMBRE_UBICACION_LISTA
     return ubicacion_final
 
-ubicacion_limpia = tuple(limpieza(ubicacionFinal))
-print(f"la ubicacion final es {ubicacion_limpia}")
+
 
 #insertar(conexion, ubicacion_limpia)
 

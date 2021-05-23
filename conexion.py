@@ -18,11 +18,13 @@ def crear_tablas(conexion):
     cursor.execute(sentencia_sql)
     conexion.commit()
 
-def insertar(conexion, datos): 
+def insertar(conexion, ubicacion): 
     cursor = conexion.cursor()
     sentencia_sql = 'INSERT INTO usuario (destino_final) VALUES (?)' 
     #cursor.execute(sentencia_sql, (datos,)) # CURIOSIDAD 1
-    cursor.execute(sentencia_sql, [datos]) # CURIOSIDAD 1
+    #cursor.execute(sentencia_sql, [datos]) # CURIOSIDAD 1
+    datos = (ubicacion,)
+    cursor.execute(sentencia_sql, datos) # CURIOSIDAD 1
     conexion.commit() 
     conexion.close()  
 
@@ -38,14 +40,9 @@ def insertar_varios(conexion, datos):
 
 
 conexion = conectar()
-#insertar(conexion, tuple(datos))
 
 crear_tablas(conexion)
 datos = "Añadido-6"
-lista = []
-lista.append(datos)
+insertar(conexion, datos)
 
-tupla = tuple(lista)
-
-print(tupla)
 
