@@ -39,11 +39,8 @@ def limpieza(ubicacion_sucia):
             ubicacion_final.append(i) # NOMBRE_UBICACION_LISTA
     return ubicacion_final
 
-ubicacion_limpia = limpieza(ubicacionFinal)
+ubicacion_limpia = tuple(limpieza(ubicacionFinal))
+insertar(conexion, ubicacion_limpia)
 
-
-def insertar(ubiacion):
-    pass
-
-#print(f"la ubicacion final es {limpieza(ubicacionFinal)}")
+print(f"la ubicacion final es {ubicacion_limpia}")
 print('Fin del programa') 
