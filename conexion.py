@@ -19,19 +19,22 @@ def crear_tablas(conexion):
 
 def insertar(conexion, datos): 
     cursor = conexion.cursor()
-    sentencia_sql = 'INSERT INTO usuario VALUES (?)' 
-    cursor.execute(sentencia_sql, datos)
+    sentencia_sql = 'INSERT INTO usuario (destino_final) VALUES (?)' 
+    cursor.execute(sentencia_sql, (datos,))
     conexion.commit() 
     conexion.close()  
 
+"""
 def insertar_varios(conexion, datos): 
     cursor = conexion.cursor()
-    sentencia_sql = 'INSERT INTO usuario VALUES (?)' 
+    sentencia_sql = 'INSERT INTO usuario (destino_final) VALUES (?)' 
     cursor.executemany(sentencia_sql, datos) # DIFERENCIA
     conexion.commit()
     conexion.close()
+"""
+
 
 conexion = conectar()
-#crear_tablas(conexion) # crea tabla esto se hace al comienzo
+#crear_tablas(conexion)
 datos = ("tienda-1")
 insertar(conexion, datos)
