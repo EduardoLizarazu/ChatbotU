@@ -20,7 +20,7 @@ class Ubicacion:
         for nombre, lugar in self.localidad.items():
             if palabra.lower() == nombre:
                 print(nombre, lugar)
-                
+                insertar(conexion, nombre)
 
 
     # El problema es de que tengo que insanciarlas todas
