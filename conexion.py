@@ -27,10 +27,3 @@ def insertar(conexion, ubicacion):
 
 
 
-
-conexion = conectar()
-
-crear_tablas(conexion)
-datos = "Añadido-6"
-insertar(conexion, datos)
-

@@ -15,7 +15,7 @@ while salir:
         tienda.buscar(p)
 
         cine.buscar(p)
-        
+
         comida.buscar(p)
 
         if p.lower() == "salir":
@@ -26,18 +26,6 @@ while salir:
         chatU = input("En que otra cosa puedo ayudarle? ") 
         palabras = chatU.split(" ")
 
-
-# LIMPIEZA DE NONE
-def limpieza(ubicacion_sucia):
-    ubicacion_final = []
-    for i in ubicacion_sucia:
-        if i != None:
-            ubicacion_final.append(i) # NOMBRE_UBICACION_LISTA
-    return ubicacion_final
-
-
-
-#insertar(conexion, ubicacion_limpia)
 
 
 print('Fin del programa') 
