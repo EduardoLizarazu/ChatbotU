@@ -20,7 +20,8 @@ def crear_tablas(conexion):
 def insertar(conexion, datos): 
     cursor = conexion.cursor()
     sentencia_sql = 'INSERT INTO usuario (destino_final) VALUES (?)' 
-    cursor.execute(sentencia_sql, (datos,)) # CURIOSIDAD 1
+    #cursor.execute(sentencia_sql, (datos,)) # CURIOSIDAD 1
+    cursor.execute(sentencia_sql, [datos]) # CURIOSIDAD 1
     conexion.commit() 
     conexion.close()  
 
@@ -35,6 +36,6 @@ def insertar_varios(conexion, datos):
 
 
 conexion = conectar()
-#crear_tablas(conexion)
-#datos = ("tienda-1")
-#insertar(conexion, datos)
+crear_tablas(conexion)
+datos = ("Añdido-3")
+insertar(conexion, datos)
