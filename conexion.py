@@ -1,4 +1,3 @@
-from os import pipe
 import sqlite3 
 from sqlite3 import Error
 
@@ -25,5 +24,11 @@ def insertar(conexion, ubicacion):
     cursor.execute(sentencia_sql, datos) # CURIOSIDAD 1
     conexion.commit() 
 
-
+def consultar(conexion):
+    cursor = conexion.cursor()
+    sentencia_sql = 'SELECT * FROM usuario' 
+    cursor.execute(sentencia_sql)
+    datos = cursor.fetchall() 
+    conexion.close()   
+    return datos
 

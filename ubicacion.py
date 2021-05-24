@@ -20,7 +20,12 @@ class Ubicacion:
             if palabra.lower() == nombre:
                 print(nombre, lugar)
                 insertar(conexion, nombre) # INSERTAR A DB
-
+        
+    def obtener_keys(self):
+        nombre = []
+        for i in self.localidad.keys():
+            nombre.append(i)
+        return nombre
 
 
 
