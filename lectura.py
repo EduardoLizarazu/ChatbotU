@@ -18,8 +18,32 @@ def contador_palabras_repetidas(datos):
         repeticiones = lista.count(nombre)
         diccionario[nombre] = repeticiones 
 
+    lista_nombres = ubicacion.cine.obtener_keys()
+    for nombre in lista_nombres:
+        repeticiones = lista.count(nombre)
+        diccionario[nombre] = repeticiones 
+
+    lista_nombres = ubicacion.comida.obtener_keys()
+    for nombre in lista_nombres:
+        repeticiones = lista.count(nombre)
+        diccionario[nombre] = repeticiones 
+
     return diccionario
 
-print(contador_palabras_repetidas(datos))
+#print(contador_palabras_repetidas(datos))
 
-#print(ubicacion.tienda.obtener_keys())
+def mayor_frecuencia(dic):
+    lista = []
+    for frecuencia in dic.values():
+        lista.append(frecuencia)
+    numeroMayor = max(lista)
+    
+    mayorFrecuencia = {}
+    for i,j in dic.items():
+        if dic[i] == numeroMayor:
+             mayorFrecuencia[i] = j
+    return mayorFrecuencia
+
+
+x = contador_palabras_repetidas(datos)
+print(mayor_frecuencia(x))
