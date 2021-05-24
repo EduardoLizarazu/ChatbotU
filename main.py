@@ -13,9 +13,7 @@ ubicacionFinal = []
 while salir:
     for p in palabras:
         tienda.buscar(p)
-
         cine.buscar(p)
-
         comida.buscar(p)
 
         if p.lower() == "salir":
@@ -25,7 +23,5 @@ while salir:
     if p.lower() != "salir":
         chatU = input("En que otra cosa puedo ayudarle? ") 
         palabras = chatU.split(" ")
-
-
 
 print('Fin del programa') 

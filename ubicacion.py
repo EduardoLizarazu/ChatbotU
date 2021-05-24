@@ -1,9 +1,7 @@
-
 from conexion import *
 
 conexion = conectar()
 crear_tablas(conexion)
-
 
 class Ubicacion:
     def __init__(self, nombre, localidad):
@@ -26,10 +24,6 @@ class Ubicacion:
         for i in self.localidad.keys():
             nombre.append(i)
         return nombre
-
-    
-
-
 
 ############ INSTANCIAS ################
 

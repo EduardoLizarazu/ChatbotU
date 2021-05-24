@@ -4,7 +4,6 @@ import ubicacion
 conexion = conectar()
 datos = consultar(conexion) 
 
-
 def funcion_aux(lista, lista_nombres):
     diccionario = {}
     for nombre in lista_nombres:
@@ -29,8 +28,6 @@ def contador_palabras_repetidas(datos):
 
     return diccionario
 
-print(contador_palabras_repetidas(datos))
-
 def mayor_frecuencia(dic):
     lista = []
     for frecuencia in dic.values():
@@ -42,7 +39,3 @@ def mayor_frecuencia(dic):
         if dic[i] == numeroMayor:
              mayorFrecuencia[i] = j
     return mayorFrecuencia
-
-
-#x = contador_palabras_repetidas(datos)
-#print(mayor_frecuencia(x))
