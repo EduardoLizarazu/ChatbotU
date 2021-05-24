@@ -27,6 +27,8 @@ class Ubicacion:
             nombre.append(i)
         return nombre
 
+    
+
 
 
 ############ INSTANCIAS ################

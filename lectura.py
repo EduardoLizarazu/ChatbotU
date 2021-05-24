@@ -4,8 +4,13 @@ import ubicacion
 conexion = conectar()
 datos = consultar(conexion) 
 
-    
-# esto puedo hacer en ubicacion.py crear un metodo ya que tengo tambien importado conexion.py
+
+def funcion_aux(lista, lista_nombres):
+    diccionario = {}
+    for nombre in lista_nombres:
+        repeticiones = lista.count(nombre)
+        diccionario[nombre] = repeticiones
+    return diccionario
 
 def contador_palabras_repetidas(datos):
     diccionario = {}
@@ -13,24 +18,18 @@ def contador_palabras_repetidas(datos):
     for dato in datos:
         lista.append(dato[1])
 
-    lista_nombres = ubicacion.tienda.obtener_keys()
-    for nombre in lista_nombres:
-        repeticiones = lista.count(nombre)
-        diccionario[nombre] = repeticiones 
+    diccionario_aux = funcion_aux(lista, ubicacion.tienda.obtener_keys())
+    diccionario.update(diccionario_aux)
 
-    lista_nombres = ubicacion.cine.obtener_keys()
-    for nombre in lista_nombres:
-        repeticiones = lista.count(nombre)
-        diccionario[nombre] = repeticiones 
+    diccionario_aux = funcion_aux(lista, ubicacion.cine.obtener_keys())
+    diccionario.update(diccionario_aux)
 
-    lista_nombres = ubicacion.comida.obtener_keys()
-    for nombre in lista_nombres:
-        repeticiones = lista.count(nombre)
-        diccionario[nombre] = repeticiones 
+    diccionario_aux = funcion_aux(lista, ubicacion.comida.obtener_keys())
+    diccionario.update(diccionario_aux)
 
     return diccionario
 
-#print(contador_palabras_repetidas(datos))
+print(contador_palabras_repetidas(datos))
 
 def mayor_frecuencia(dic):
     lista = []
@@ -45,5 +44,5 @@ def mayor_frecuencia(dic):
     return mayorFrecuencia
 
 
-x = contador_palabras_repetidas(datos)
-print(mayor_frecuencia(x))
+#x = contador_palabras_repetidas(datos)
+#print(mayor_frecuencia(x))
