@@ -39,3 +39,10 @@ def mayor_frecuencia(dic):
         if dic[i] == numeroMayor:
              mayorFrecuencia[i] = j
     return mayorFrecuencia
+
+
+#print(mayor_frecuencia(contador_palabras_repetidas(datos)))
+
+mayor_frecuencia_palabras = mayor_frecuencia(contador_palabras_repetidas(datos))
+
+

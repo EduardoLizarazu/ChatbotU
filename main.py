@@ -1,11 +1,15 @@
 from ubicacion import *
 from conexion import *
+import lectura
 
 conexion = conectar()
 crear_tablas(conexion)
 
-chatU = input("Hola soy Alicie, en puedo ayudarle ? ") 
+chatU = input("Hola soy Alicie, en puedo ayudarle ? ")
 palabras = chatU.split(" ")
+
+for i in lectura.mayor_frecuencia_palabras.keys():
+    print(f"La palabra mas frecuente es {i}")
 
 salir = True # ENTRADA
 ubicacionFinal = [] 
