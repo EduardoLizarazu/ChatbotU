@@ -17,7 +17,7 @@ class Ubicacion:
         for nombre, lugar in self.localidad.items():
             if palabra.lower() == nombre:
                 print(nombre, lugar)
-                insertar(conexion, nombre) # INSERTAR A DB
+                insertar(conexion, nombre) # INSERTAR A BD
         
     def obtener_keys(self):
         nombre = []
